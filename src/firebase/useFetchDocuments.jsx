@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { db } from "../firebase/config"; // Importe sua configuração do Firebase
+import { db } from "../firebase/config"; 
 import { collection, getDocs } from "firebase/firestore";
 
 const useFetchDocuments = (collectionName) => {
