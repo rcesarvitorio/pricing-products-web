@@ -5,12 +5,9 @@ const auth = getAuth();
 
 export const addIngredient = async (accountId, ingredient) => {
     try {
-        console.log('Chamando addIngredient para:', ingredient);
-        const ingredientsRef = collection(db, "accounts", accountId, "ingredients");
-        
+        const ingredientsRef = collection(db, "accounts", accountId, "ingredients");   
         await addDoc(ingredientsRef, ingredient);
     
-        console.log('Ingrediente adicionado com sucesso!');
     } catch (error) {
         console.error('Erro ao adicionar ingrediente:', error);
     }
@@ -19,11 +16,7 @@ export const addIngredient = async (accountId, ingredient) => {
 export const addRecipe = async (accountId, recipe) => {
     try {
         const recipesRef = collection(db, "accounts", accountId, "recipes");
-        console.log('Chamando addRecipe para:', recipe);
-        console.log('accountId', accountId);
         await addDoc(recipesRef, recipe);
-    
-        console.log('Receita adicionada com sucesso!');
     } catch (error) {
         console.error('Erro ao adicionar receita:', error);
     }
@@ -31,11 +24,8 @@ export const addRecipe = async (accountId, recipe) => {
 
 export const addAccount = async (account) => {
     try {
-        const accountsRef = collection(db, "accounts");
-        
+        const accountsRef = collection(db, "accounts");       
         await addDoc(accountsRef, account);
-    
-        console.log('Conta adicionada com sucesso!');
     } catch (error) {
         console.error('Erro ao adicionar conta:', error);
     }

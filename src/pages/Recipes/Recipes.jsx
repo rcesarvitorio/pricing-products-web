@@ -53,7 +53,7 @@ const Recipes = () => {
 
     const filterRecipes = recipes?.filter((recipe) => {
         if (!search) return true;
-        return recipe.nome.toLowerCase().includes(search.toLowerCase());
+        return recipe.name.toLowerCase().includes(search.toLowerCase());
     });
 
     const handleAddRecipe = () => {

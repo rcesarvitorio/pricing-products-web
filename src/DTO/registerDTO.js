@@ -16,7 +16,6 @@ class RegisterDTO {
     }
 
     isValid() {
-        console.log(this.name,this.email, this.password);
         return this.validateEmail() && this.validatePassword();
     }
 
