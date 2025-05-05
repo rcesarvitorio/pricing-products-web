@@ -1,9 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
-import env from "../../config/config.js"
-
-console.log(env.FIREBASE_CONFIG)
+import env from '../../config/config.js';
 
 
 const app = initializeApp(env.FIREBASE_CONFIG);
