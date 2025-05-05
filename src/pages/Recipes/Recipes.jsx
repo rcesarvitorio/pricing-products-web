@@ -107,7 +107,7 @@ const Recipes = () => {
                             <tbody>
                                 {filterRecipes?.map((recipe, index) => (
                                     <tr key={index}>
-                                        <td>{recipe.nome}</td>
+                                        <td>{recipe.name}</td>
                                         <td>
                                             <button>Editar</button>
                                             <button>Excluir</button>
