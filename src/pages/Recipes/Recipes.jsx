@@ -28,6 +28,7 @@ const Recipes = () => {
     const fetchRecipes = async () => {
         try {
             const data = await fetchRecipesById(user.uid);
+            console.log("Fetched recipes:", data);
             setRecipes(data);
 
         } catch (error) {
@@ -47,6 +48,7 @@ const Recipes = () => {
     const handleSearch = (e) => {
         setSearch(e.target.value);
     };
+
     const handleDroppedItemsChange = (items) => {
         setDroppedItems(items);
     };
